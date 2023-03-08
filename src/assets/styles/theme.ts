@@ -3,7 +3,7 @@ import { constants } from './constants';
 
 const theme = {
     colors,
-    constants
+    constants,
 } as const;
 
 export default theme;
