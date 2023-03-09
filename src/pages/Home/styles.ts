@@ -50,7 +50,7 @@ export const ChartBox = styled.div`
 `
 export const ChartBoxTwo = styled.div`
   display: flex;
-  width: 27rem;
+  width: 25.8rem;
   height: 15rem;
   margin: 0.3rem;
   background-color: #ffffffff;
