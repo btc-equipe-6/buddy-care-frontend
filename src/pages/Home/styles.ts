@@ -39,14 +39,19 @@ export const BottomBox = styled.div`
 `
 export const ChartBox = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 17rem;
   height: 15rem;
   margin: 0.3rem;
-  background-color: #ffffffff;
+  background-color: #71c2bb;
   border-radius: 10%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  cursor: pointer;
+`
+export const ContentText = styled.h2`
+  color: #ffffffff;
+  padding: 0.5rem;
 `
 export const ChartBoxTwo = styled.div`
   display: flex;
