@@ -17,7 +17,7 @@ const Home = () => {
                     </ChartBox>
                     <ChartBox>
                         <ContentText>9</ContentText>
-                        <ContentText>DIÁRIOS NÃO LIDOS</ContentText>
+                        <ContentText>DIÁRIOS LIDOS</ContentText>
                     </ChartBox>
                 </TopBox>
                 <BottomBox>

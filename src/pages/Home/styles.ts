@@ -49,9 +49,9 @@ export const ChartBox = styled.div`
   border-radius: 10%;
   cursor: pointer;
 `
-export const ContentText = styled.h2`
+export const ContentText = styled.h3`
   color: #ffffffff;
-  padding: 0.5rem;
+  padding: 0.3rem;
 `
 export const ChartBoxTwo = styled.div`
   display: flex;
