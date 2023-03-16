@@ -14,6 +14,7 @@
     "@types/styled-components": "^5.1.26",
     "chart.js": "^4.2.1",
     "eslint-config-standard-with-typescript": "^34.0.0",
+    "multicarousel": "^3.0.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
@@ -54,6 +55,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@types/react-slick": "^0.23.10",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.35.0",

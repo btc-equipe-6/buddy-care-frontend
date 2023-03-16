@@ -1,4 +1,4 @@
-import PatientCard from "components/PatientCards";
+import PatientCards from "components/PatientCards";
 import { Container, InputPatient, PatientContainer } from "./styles";
 import { useState } from "react";
 import { patients } from "components/PatientCards";
@@ -12,7 +12,7 @@ const Patients  = () => {
         <Container>
           <InputPatient value={filter} onChange={(e) => setFilter(e.target.value)} />
             <PatientContainer>
-                <PatientCard filteredPatients={filteredPatients} />
+                <PatientCards filteredPatients={filteredPatients} />
             </PatientContainer>
         </Container>
      );

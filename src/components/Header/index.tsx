@@ -12,6 +12,7 @@ import {
     DropdownMenu,
     DropdownItem
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +27,18 @@ function Header() {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>
                         <NavItem>
-                            <NavLink href="">Home</NavLink>
+                            <Link 
+                            to="/"
+                            style={ { color: 'transparent' } }>
+                                <NavLink href="">Home</NavLink>
+                            </Link>            
                         </NavItem>
                         <NavItem>
-                            <NavLink href="">Pacientes</NavLink>
+                        <Link
+                         to="/Patients"
+                         style={ { color: 'transparent' } }>
+                                <NavLink href="">Pacientes</NavLink>
+                            </Link> 
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
