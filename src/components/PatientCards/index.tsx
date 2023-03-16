@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import { PatientContainer, PatientProfile, PatientData } from './styles';
 
 export const patients = [
     {
+      id: 'abcd1',
       name: 'Fernando Sobral',
       age: 27,
       email: 'fernandrosobral@gmail.com',
@@ -11,6 +13,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd2',
       name: 'Irlan Mattos',
       age: 15,
       email: 'irlanmattos@gmail.com',
@@ -20,6 +23,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd3',
       name: 'Anielly Lima',
       age: 21,
       email: 'aniellylima@gmail.com',
@@ -29,6 +33,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd4',
       name: 'Marcelo Silva',
       age: 49,
       email: 'marcelosilva@gmail.com',
@@ -38,6 +43,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd5',
       name: 'André Montserrat',
       age: 32,
       email: 'fernandrosobral@gmail.com',
@@ -47,6 +53,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd6',
       name: 'Erilandia Silva',
       age: 23,
       email: 'erilandiasilva@gmail.com',
@@ -56,6 +63,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd7',
       name: 'José Macedo',
       age: 32,
       email: 'josemacedo@gmail.com',
@@ -65,6 +73,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd8',
       name: 'Rafael Lacerda',
       age: 37,
       email: 'rafaellacerda@gmail.com',
@@ -74,6 +83,7 @@ export const patients = [
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
     {
+      id: 'abcd9',
       name: 'Agatha Luniere',
       age: 38,
       email: 'agathaluniere@gmail.com',
@@ -85,6 +95,7 @@ export const patients = [
   ];
 
   type Patient = {
+    id: string;
     name: string;
     age: number;
     email: string;
@@ -102,6 +113,7 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
   return ( 
     <>
     {filteredPatients.map((patients) => (
+       <Link to={`/patients/${patients.id}`} key={patients.id}>
         <PatientContainer key={patients.name}>
           <PatientProfile>
           </PatientProfile>
@@ -109,6 +121,7 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
             {patients.name}
           </PatientData>
         </PatientContainer>
+        </Link>
       ))}
     </>   
   );
