@@ -9,6 +9,7 @@ import {
   Button,
 } from 'reactstrap';
 import './App.css';
+import { Link } from 'react-router-dom';
  
 class App extends Component {
   constructor(props) {
@@ -94,7 +95,9 @@ class App extends Component {
           </FormGroup> <br />
           <Button>Enviar</Button>
         </Form>
-        <p class="text-center">Ainda não é um membro? <a data-toggle="tab" href="formulario.html">Cadastre-se</a></p>
+        <Link>
+        <p class="text-center">Ainda não é um membro?</p>
+        </Link>
       </div>
     );
   }

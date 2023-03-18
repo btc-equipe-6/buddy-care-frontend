@@ -103,7 +103,7 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
   return ( 
     <>
     {filteredPatients.map((patients) => (
-       <Link to={`/patient/${patients.name}`} key={patients.name}>
+       <Link to={`/patient/1`} key={patients.name} style={ { color: 'transparent' } }>
         <PatientContainer key={patients.name}>
           <PatientProfile>
           </PatientProfile>

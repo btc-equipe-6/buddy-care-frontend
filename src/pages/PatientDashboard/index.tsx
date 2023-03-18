@@ -1,17 +1,9 @@
 import BarChart from "components/Charts/BarChart";
 import PolarChart from "components/Charts/PolarChart";
-import { patientsN } from "components/PatientCards";
 import { BottomBox, ChartBox, ChartBoxTwo, Container, Content, ContentText, TopBox } from "pages/Home/styles";
-import { useParams } from "react-router-dom";
 
 const PatientDashboard = () => {
-    
-    const { id } = useParams();
-    const patient = patientsN.find((patient) => patient.id === id);
 
-    if (!patient) {
-        return <div>Paciente não encontrado.</div>;
-    }
 
     return ( 
         <Container>
@@ -19,15 +11,15 @@ const PatientDashboard = () => {
                 <TopBox>
                     <ChartBox>
                         <ContentText>Nome</ContentText>
-                        <ContentText>{patient.name}</ContentText>
+                        <ContentText>Marcelo Mattos</ContentText>
                     </ChartBox>
                     <ChartBox>
                         <ContentText>Idade</ContentText>
-                        <ContentText>{patient.age}</ContentText>
+                        <ContentText>41</ContentText>
                     </ChartBox>
                     <ChartBox>
                         <ContentText>Telefone</ContentText>
-                        <ContentText>{patient.phonenumber}</ContentText>
+                        <ContentText>7523932882</ContentText>
                     </ChartBox>
                 </TopBox>
                 <BottomBox>
