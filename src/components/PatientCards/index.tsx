@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { PatientContainer, PatientProfile, PatientData } from './styles';
+import { Patient } from 'types/api-types/patients';
 
-export const patients = [
+export const patientsN = [
     {
       id: 'abcd1',
       name: 'Fernando Sobral',
@@ -92,18 +93,7 @@ export const patients = [
       emergencyContact: '73999284181',
       image: 'https://via.placeholder.com/300x200.png?text=Item+1',
     },
-  ];
-
-  type Patient = {
-    id: string;
-    name: string;
-    age: number;
-    email: string;
-    gender: string;
-    phonenumber: number;
-    emergencyContact: string;
-    image: string;
-  };
+];
   
   interface PatientCardProps {
     filteredPatients: Patient[];
@@ -113,7 +103,7 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
   return ( 
     <>
     {filteredPatients.map((patients) => (
-       <Link to={`/patients/${patients.id}`} key={patients.id}>
+       <Link to={`/patient/${patients.name}`} key={patients.name}>
         <PatientContainer key={patients.name}>
           <PatientProfile>
           </PatientProfile>

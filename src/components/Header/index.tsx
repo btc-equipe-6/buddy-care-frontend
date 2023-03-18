@@ -27,18 +27,22 @@ function Header() {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>
                         <NavItem>
-                            <Link 
-                            to="/"
-                            style={ { color: 'transparent' } }>
-                                <NavLink href="">Home</NavLink>
-                            </Link>            
+                            <div>
+                                <Link 
+                                    to="/psychologist"
+                                    style={ { color: 'transparent' } }>
+                                    <NavLink href="">Home</NavLink>
+                                </Link>    
+                            </div>                                   
                         </NavItem>
                         <NavItem>
-                        <Link
-                         to="/Patients"
-                         style={ { color: 'transparent' } }>
+                            <div>
+                            <Link
+                                to="/patient"
+                                style={ { color: 'transparent' } }>
                                 <NavLink href="">Pacientes</NavLink>
                             </Link> 
+                            </div>              
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>

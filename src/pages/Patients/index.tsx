@@ -1,12 +1,34 @@
 import PatientCards from "components/PatientCards";
 import { Container, InputPatient, PatientContainer } from "./styles";
-import { useState } from "react";
-import { patients } from "components/PatientCards";
+import { useEffect, useState } from "react";
+import { AllPatients } from "services/PatientService";
+import { Patient } from "types/api-types/patients";
+
 
 const Patients  = () => {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("");  
+  const [patients, setPatients] = useState<Patient[]>([]);
+
+  useEffect(() => {
+    const getPatients = async () => {
+      try {
+        const response = await AllPatients.AllPatients();
+        console.log(response)
+        if (response && response.data) {
+          setPatients(response.data);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getPatients();
+  }, []);
+
+
+
   const filteredPatients = patients.filter((patient) =>
   patient.name.toLowerCase().includes(filter.toLowerCase())
+
 );
     return ( 
         <Container>

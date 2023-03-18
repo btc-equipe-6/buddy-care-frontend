@@ -1,13 +1,13 @@
 import BarChart from "components/Charts/BarChart";
 import PolarChart from "components/Charts/PolarChart";
-import { patients } from "components/PatientCards";
+import { patientsN } from "components/PatientCards";
 import { BottomBox, ChartBox, ChartBoxTwo, Container, Content, ContentText, TopBox } from "pages/Home/styles";
 import { useParams } from "react-router-dom";
 
 const PatientDashboard = () => {
     
     const { id } = useParams();
-    const patient = patients.find((patient) => patient.id === id);
+    const patient = patientsN.find((patient) => patient.id === id);
 
     if (!patient) {
         return <div>Paciente não encontrado.</div>;
