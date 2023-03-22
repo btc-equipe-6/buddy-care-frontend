@@ -12,31 +12,37 @@ export const Container = styled.div`
   overflow: hidden;
   background: linear-gradient(90deg, rgba(244,244,244,1) 4%, rgba(112,194,187,1) 100%);
   color: black;
+
   @media screen and (max-width: 1280px) {
     padding: 2rem 2rem;
   }
+
   @media screen and (max-width: 1080px) {
     padding: 2rem 1rem;
   }
-`
+`;
+
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`
+`;
+
 export const TopBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`
+`;
+
 export const BottomBox = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`
+`;
+
 export const ChartBox = styled.div`
   display: flex;
   flex-direction: column;
@@ -48,11 +54,19 @@ export const ChartBox = styled.div`
   background-color: #71c2bb;
   border-radius: 10%;
   cursor: pointer;
-`
+
+  @media screen and (max-width: 768px) {
+    width: 14rem;
+    height: 12rem;
+    margin: 0.2rem;
+  }
+`;
+
 export const ContentText = styled.h3`
   color: #ffffffff;
   padding: 0.3rem;
-`
+`;
+
 export const ChartBoxTwo = styled.div`
   display: flex;
   width: 25.8rem;
@@ -63,5 +77,12 @@ export const ChartBoxTwo = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`
+
+  @media screen and (max-width: 768px) {
+    width: 20rem;
+    height: 12rem;
+    margin: 0.2rem;
+  }
+`;
+
 

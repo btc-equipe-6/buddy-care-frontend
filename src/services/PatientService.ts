@@ -26,6 +26,7 @@ export const AllPatients = {
   CreatePatient: async (patient: Patient) => {
     try {
       const res = await Api.post("/patient", patient);
+      console.log("foi")
       return res;
     } catch (error: any) {
       console.log(error);
