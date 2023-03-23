@@ -105,8 +105,7 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
     {filteredPatients.map((patients) => (
        <Link to={`/patient/1`} key={patients.name} style={ { color: 'transparent' } }>
         <PatientContainer key={patients.name}>
-          <PatientProfile>
-          </PatientProfile>
+          <PatientProfile src="https://img.freepik.com/fotos-gratis/aluna-bonita-em-luvas-quentes-de-chapeu-vermelho-senta-se-no-parque-sorri-e-parece-feliz_1258-150935.jpg?w=740&t=st=1679335779~exp=1679336379~hmac=bd17d1084edfa2e65f30efca8eabbc52c76275eb77149de2a01fd2771481b1bf" alt="profile" />
           <PatientData>
             {patients.name}
           </PatientData>

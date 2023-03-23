@@ -27,21 +27,19 @@ const Home = () => {
 
     return ( 
         <Container>
-            {psychologist.map((psychologist) => (
             <Content>
-            
                 <TopBox>
                     <ChartBox>
                         <ContentText>Nome</ContentText>
-                        <ContentText>{psychologist.name}</ContentText>
+                        <ContentText>André</ContentText>
                     </ChartBox>
                     <ChartBox>
                         <ContentText>Email</ContentText>
-                        <ContentText>{psychologist.email}</ContentText>
+                        <ContentText>Ferreira</ContentText>
                     </ChartBox>
                     <ChartBox>
                         <ContentText>Telefone</ContentText>
-                        <ContentText>{psychologist.phoneNumber}</ContentText>
+                        <ContentText>73999578910</ContentText>
                     </ChartBox>
                 </TopBox>
                 <BottomBox>
@@ -52,9 +50,7 @@ const Home = () => {
                         <PolarChart />
                     </ChartBoxTwo>
                 </BottomBox>
-                
             </Content>  
-            ))}
         </Container>
      );
 }
