@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { PatientContainer, PatientProfile, PatientData } from './styles'
 import { Patient } from 'types/api-types/patients'
-import { Button } from 'reactstrap'
 
 export const patientsN = [
  {
