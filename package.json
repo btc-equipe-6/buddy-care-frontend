@@ -2,7 +2,7 @@
   "name": "buddycare",
   "version": "0.1.0",
   "private": true,
-  "homepage": "github-page/",
+  "homepage": "https://bt6-equipe-6.github.io/buddy-care-frontend",
   "dependencies": {
     "@tanstack/react-query": "^4.26.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -30,6 +30,8 @@
   "scripts": {
     "commit": "git-cz",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -66,6 +68,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.4"
   },
