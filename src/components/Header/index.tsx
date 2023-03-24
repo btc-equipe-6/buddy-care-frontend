@@ -44,6 +44,15 @@ function Header() {
                             </Link> 
                             </div>              
                         </NavItem>
+                        <NavItem>
+                            <div>
+                                <Link 
+                                    to="/diary"
+                                    style={ { color: 'transparent' } }>
+                                    <NavLink href="">Diario</NavLink>
+                                </Link>    
+                            </div>                                   
+                        </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
                                 Ajuda

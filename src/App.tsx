@@ -16,12 +16,14 @@ function App() {
       <BrowserRouter>
           <GlobalStyles/>
           <Header />
+
           <QueryClientProvider client={queryClient}>
               <Router />
             </QueryClientProvider>
       </BrowserRouter>
     </ThemeProvider>
-  );
+ 
+    );
 }
 
 export default App;
