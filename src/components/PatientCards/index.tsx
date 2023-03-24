@@ -101,7 +101,6 @@ interface PatientCardProps {
 }
 
 const PatientCards = ({ filteredPatients }: PatientCardProps) => {
-<<<<<<< HEAD
   return ( 
     <>
     {filteredPatients.map((patients) => (
@@ -117,28 +116,6 @@ const PatientCards = ({ filteredPatients }: PatientCardProps) => {
     </>   
   );
     
-=======
- return (
-  <>
-   {filteredPatients.map(patients => (
-    <Link
-     to={`/patient/1`}
-     key={patients.name}
-     style={{ color: 'transparent' }}>
-     <PatientContainer key={patients.name}>
-      <PatientProfile></PatientProfile>
-      <PatientData>{patients.name}</PatientData>
-      <div>
-       <Link to='/report' style={{ color: 'transparent' }}>
-        <Button href=''>Criar Relatório</Button>
-       </Link>
-      </div>
-     </PatientContainer>
-    </Link>
-   ))}
-  </>
- )
->>>>>>> development
 }
 
 export default PatientCards
