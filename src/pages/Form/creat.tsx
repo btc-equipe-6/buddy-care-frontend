@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Patient } from 'types/api-types/patients'
 import { AllPatients } from 'services/PatientService'
 import './creat.css'
-function creat() {
+function Creat() {
  const [newPatient, setNewPatient] = useState<Patient>({} as Patient)
  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
   e.preventDefault()
@@ -81,4 +81,4 @@ function creat() {
   </section>
  )
 }
-export default creat
+export default Creat

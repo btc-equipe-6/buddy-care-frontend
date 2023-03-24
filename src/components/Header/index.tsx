@@ -49,7 +49,7 @@ function Header() {
                                 <Link 
                                     to="/diary"
                                     style={ { color: 'transparent' } }>
-                                    <NavLink href="">diario</NavLink>
+                                    <NavLink href="">Diario</NavLink>
                                 </Link>    
                             </div>                                   
                         </NavItem>
