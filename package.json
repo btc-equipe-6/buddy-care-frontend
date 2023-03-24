@@ -2,6 +2,7 @@
   "name": "buddycare",
   "version": "0.1.0",
   "private": true,
+  "homepage": "github-page/",
   "dependencies": {
     "@tanstack/react-query": "^4.26.1",
     "@testing-library/jest-dom": "^5.16.5",
