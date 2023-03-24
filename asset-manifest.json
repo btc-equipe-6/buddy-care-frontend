@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/buddy-care-frontend/static/css/main.6c0defb2.css",
+    "main.js": "/buddy-care-frontend/static/js/main.9d1fd9d4.js",
+    "index.html": "/buddy-care-frontend/index.html",
+    "main.6c0defb2.css.map": "/buddy-care-frontend/static/css/main.6c0defb2.css.map",
+    "main.9d1fd9d4.js.map": "/buddy-care-frontend/static/js/main.9d1fd9d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c0defb2.css",
+    "static/js/main.9d1fd9d4.js"
+  ]
+}
