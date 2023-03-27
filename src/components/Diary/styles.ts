@@ -1,28 +1,6 @@
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-}
+import styled from "styled-components";
 
-section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    color: #1f3a93;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-
-
-textarea {
+export const TextArea = styled.textarea`
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -31,9 +9,8 @@ textarea {
     border-radius: 4px;
     resize: vertical;
     margin-bottom: 20px;
-}
-
-button {
+`
+export const ButtonDiary = styled.button`
     background-color: #1f3a93;
     color: #fff;
     border: none;
@@ -41,9 +18,9 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
-
-button:hover {
+    :hover {
     background-color: #f8e9a1;
     color: #1f3a93;
-}
+    }
+`
+

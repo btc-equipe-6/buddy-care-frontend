@@ -1,8 +1,9 @@
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Patient } from 'types/api-types/patients'
 import { AllPatients } from 'services/PatientService'
-import './creat.css'
+import './styles.ts'
+import { CreatArea, CreatInput, FormCreate } from './styles'
 function Creat() {
  const [newPatient, setNewPatient] = useState<Patient>({} as Patient)
  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -18,67 +19,60 @@ function Creat() {
  }
 
  return (
-  <section className='creatArea'>
-   <form className='formCreate' onSubmit={handleSubmit}>
-    <input
-     className='creatInput'
+  <CreatArea>
+   <FormCreate onSubmit={handleSubmit}>
+    <CreatInput
      placeholder='name'
      onChange={event => {
       setNewPatient({ ...newPatient, name: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='email'
      type='email'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, email: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='senha'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, password: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='Idade'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, age: parseInt(event.target.value) })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='Genero'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, gender: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='Numero de Telefone'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, phoneNumber: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
-    <input
-     className='creatInput'
+     }}></CreatInput>
+    <CreatInput
      placeholder='Telefone de emergencia'
      required
      onChange={event => {
       setNewPatient({ ...newPatient, emergencyContact: event.target.value })
       console.log('aoba', newPatient)
-     }}></input>
+     }}></CreatInput>
     <button>sign in</button>
-   </form>
-  </section>
+   </FormCreate>
+  </CreatArea>
  )
 }
 export default Creat

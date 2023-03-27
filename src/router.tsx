@@ -3,9 +3,9 @@ import { RoutePath } from 'types/routes';
 import Home from "pages/Home/index";
 import Patients from 'pages/Patients';
 import PatientDashboard from 'pages/PatientDashboard';
-import Journal from 'pages/Journal/Jornal';
+import Journal from 'pages/Journal';
 import Report from 'pages/Reports/reports';
-import App from '../src/pages/Form/creat';
+import App from './pages/Creat';
 
 
 const Router = () => {
