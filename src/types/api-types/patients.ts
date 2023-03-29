@@ -8,4 +8,8 @@ export interface Patient {
     emergencyContact: string;
   }
 
-  
+  export interface sentimentAnalysisPacient{
+    patientId:string;
+    txt:string;
+    createdAt?:string;
+  }

@@ -1,5 +1,5 @@
 import Api from "helpers/Api/axios-config";
-import { Patient } from "types/api-types/patients";
+import { Patient, sentimentAnalysisPacient } from "types/api-types/patients";
 
 export const AllPatients = {
   AllPatients: async () => {
@@ -32,5 +32,15 @@ export const AllPatients = {
       console.log(error);
     }
   },
+  creatSentimentAnalise: async (post:sentimentAnalysisPacient) => {
+    console.log(localStorage);
+    try {
+      const newPost = await Api.post("/Sentiment", post);
+      return newPost;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+    
+  }
 
-};
