@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Diary from "components/Diary";
+import AppointmentForm from "components/appoitamentForm";
 
 import {
   JournalMain,
@@ -76,15 +77,7 @@ const Journal = () => {
         
         ):  (
             <JournalSection>
-                <TextJournal>Agendamentos de Consulta</TextJournal>
-                <Paragraph>
-                    Aqui você pode visualizar seus agendamentos de
-                    consulta marcados com seu médico.
-                </Paragraph>
-                <Paragraph>
-                    Para marcar uma nova consulta, entre em contato
-                    com seu médico diretamente.
-                </Paragraph>
+               <AppointmentForm/>
             </JournalSection>
         )}
       </JournalSection>

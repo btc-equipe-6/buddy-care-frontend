@@ -1,4 +1,5 @@
 import Api from "helpers/Api/axios-config";
+import { appointiment } from "types/api-types/appointment";
 import { Patient, sentimentAnalysisPacient } from "types/api-types/patients";
 
 export const AllPatients = {
@@ -41,6 +42,15 @@ export const AllPatients = {
       console.log(err);
     }
   },
-    
+  therapysection:async (solicitation:appointiment) => {
+    try {
+      const newSolicitation = await Api.post("/therapy-request", solicitation);
+      return  newSolicitation;
+    } catch (err) {
+      console.log(err);
+    }
+  },
   }
+    
+  
 

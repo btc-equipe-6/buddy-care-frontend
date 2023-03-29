@@ -1,4 +1,4 @@
-import { useState, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent,} from "react";
 import { AllPatients } from "services/PatientService";
 import { sentimentAnalysisPacient } from "types/api-types/patients";
 import { ButtonDiary, TextArea } from "./styles";
@@ -19,12 +19,13 @@ const Diary = () => {
     try {
       await AllPatients.creatSentimentAnalise(newPost);
       console.log("ok");
+      setNewPost({ ...newPost, txt: "" })
     } catch (error) {
       console.error(error);
     }
   };
-
-  return (
+ 
+return (
     <form onSubmit={handleSubmit}>
       <TextArea
         id="journal-entry"
