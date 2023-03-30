@@ -7,5 +7,4 @@ export const StyledLoginPage = styled.div`
  justify-content: center;
  width: 100%;
  height: 100%;
- background-color: #2cb8ac;
 `

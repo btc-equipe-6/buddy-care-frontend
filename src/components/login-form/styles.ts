@@ -9,14 +9,33 @@ export const StyledLoginForm = styled.div`
  margin-top: 40px;
  margin-bottom: auto;
  max-width: 400px;
- border: solid 4px;
  border-radius: 10px;
  height: 400px;
+ color: white;
  background-color: #71c2bb;
  h2 {
   margin: 20px;
   font-size: 40px;
  }
+ h3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: white;
+    cursor: pointer;
+ }
+`
+export const InputLogin = styled.input`
+  display: flex;
+  width: 90%;
+  padding: 3px 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  height: 35px;
+  font-size: 1.2rem;
 `
 
 export type StyledFormProps = {
@@ -29,17 +48,6 @@ export const StyledForm = styled.form<StyledFormProps>`
  align-items: center;
  justify-content: center;
  width: 90%;
- input {
-  display: flex;
-  width: 90%;
-  padding: 3px 5px;
-  margin: 5px;
-  border-radius: 5px;
-  border: ${props => (props.error ? 'solid 2px red' : 'none')};
-  height: 35px;
-  background-color: #97f0e8;
-  font-size: 1.2rem;
- }
  div {
   display: flex;
   flex-direction: row;
@@ -60,7 +68,7 @@ export const StyledForm = styled.form<StyledFormProps>`
   button {
    display: flex;
    align-items: center;
-   border: ${props => (props.error ? 'solid 2px red' : 'none')};
+   width: 2rem;
    border-left: none;
    padding: 0 5px;
    margin: 0;
@@ -70,14 +78,12 @@ export const StyledForm = styled.form<StyledFormProps>`
   }
  }
  button {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 10px;
-  border: none;
-  background-color: #97f0e8;
-  cursor: pointer;
-  font-size: 25px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    width: 90%;
+    color: white;
  }
 `

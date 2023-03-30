@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react'
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs'
-import { StyledForm, StyledLoginForm } from './styles'
+import { InputLogin, StyledForm, StyledLoginForm } from './styles'
 import { apiLogin } from '../../services/LoginService'
 import { useNavigate } from 'react-router-dom'
 import { Loading } from '../loading/loading'
@@ -52,9 +52,9 @@ export function LoginForm() {
     <StyledLoginForm>
      <h2>Login</h2>
      <StyledForm onSubmit={handleSubmit} error={error}>
-      <input placeholder='Seu email' name='email' type='email' required />
+      <InputLogin placeholder='Seu email' name='email' type='email' required />
       <div>
-       <input
+       <InputLogin
         placeholder='Sua senha'
         type={showPassword ? 'text' : 'password'}
         name='password'
@@ -64,14 +64,11 @@ export function LoginForm() {
         {showPassword ? <BsEyeSlashFill size={25} /> : <BsEyeFill size={25} />}
        </button>
       </div>
-      <button
-       onClick={() => {
-        navigate('/creat')
-       }}>
-       Cadastrar
-      </button>
       <button type='submit'>Entrar</button>
      </StyledForm>
+     <h3 onClick={() => {
+        navigate('/register')
+       }}> Ainda não tem cadastro? Clique aqui </h3>
     </StyledLoginForm>
    )}
   </>

@@ -4,5 +4,6 @@ export enum RoutePath {
   PATIENTS_DASHBOARD = '/patient/1',
   diary = '/diary',
   LOGIN = '/',
-  Report= '/report'
+  Report= '/report',
+  REGISTER= '/register'
 }

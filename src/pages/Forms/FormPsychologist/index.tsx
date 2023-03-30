@@ -56,7 +56,9 @@ function CreatPsychologist() {
       console.log('aoba', newPsychologist)
      }}></CreatInput>
     <button>sign in</button>
-    <h3> Já tenho login </h3>
+    <Link to='/' style={ { color: 'transparent' } }>
+      <h3>Já tenho login</h3>
+    </Link>
    </FormCreate>
  )
 }
