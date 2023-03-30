@@ -13,6 +13,7 @@ export interface Psychologist {
  city?: string
  street?: string
  fee?: number
+ imageUrl?: string
 }
 
 export interface PsychologistDetails extends Psychologist {
