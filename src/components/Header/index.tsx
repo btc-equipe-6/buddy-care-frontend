@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {
     Collapse,
     Navbar,
@@ -13,9 +13,14 @@ import {
     DropdownItem
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from 'context/AuthContext';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const { loggedIn, role } = useContext(AuthContext);
+
+    console.log(loggedIn);
+    console.log(role);
 
     const toggle = () => setIsOpen(!isOpen);
 
@@ -26,33 +31,48 @@ function Header() {
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>
+                        {loggedIn === true && role === 'patient' && (
+                        <>
                         <NavItem>
-                            <div>
-                                <Link 
-                                    to="/psychologist"
-                                    style={ { color: 'transparent' } }>
-                                    <NavLink href="">Home</NavLink>
-                                </Link>    
-                            </div>                                   
-                        </NavItem>
+                                <div>
+                                    <Link
+                                        to="/home"
+                                        style={{ color: 'transparent' }}>
+                                        <NavLink href="">Home</NavLink>
+                                    </Link>
+                                </div>
+                            </NavItem><NavItem>
+                                    <div>
+                                        <Link
+                                            to="/diary"
+                                            style={{ color: 'transparent' }}>
+                                            <NavLink href="">Diario</NavLink>
+                                        </Link>
+                                    </div>
+                                </NavItem>
+                        </>
+                        )}
+                        {loggedIn === true && role === 'psychologist' && (
+                        <>
                         <NavItem>
-                            <div>
-                            <Link
-                                to="/patient"
-                                style={ { color: 'transparent' } }>
-                                <NavLink href="">Pacientes</NavLink>
-                            </Link> 
-                            </div>              
-                        </NavItem>
-                        <NavItem>
-                            <div>
-                                <Link 
-                                    to="/diary"
-                                    style={ { color: 'transparent' } }>
-                                    <NavLink href="">Diario</NavLink>
-                                </Link>    
-                            </div>                                   
-                        </NavItem>
+                                <div>
+                                    <Link
+                                        to="/home"
+                                        style={{ color: 'transparent' }}>
+                                        <NavLink href="">Home</NavLink>
+                                    </Link>
+                                </div>
+                            </NavItem><NavItem>
+                                    <div>
+                                        <Link
+                                            to="/patient"
+                                            style={{ color: 'transparent' }}>
+                                            <NavLink href="">Pacientes</NavLink>
+                                        </Link>
+                                    </div>
+                                </NavItem>
+                        </>
+                        )}
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
                                 Ajuda
