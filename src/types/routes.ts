@@ -1,8 +1,8 @@
 export enum RoutePath {
-  HOME = '/psychologist',
+  HOME = '/home',
   PATIENTS = '/patient',
   PATIENTS_DASHBOARD = '/patient/1',
-  diary= '/diary',
+  diary = '/diary',
   LOGIN = '/',
   Report= '/report'
 }

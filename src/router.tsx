@@ -5,13 +5,13 @@ import Patients from 'pages/Patients';
 import PatientDashboard from 'pages/PatientDashboard';
 import Journal from 'pages/Journal';
 import Report from 'pages/Reports/reports';
-import App from './pages/Creat';
+import MainForm from 'pages/Forms';
 
 
 const Router = () => {
     return (
         <Routes>
-            <Route path={RoutePath.LOGIN} element={<App />} />
+            <Route path={RoutePath.LOGIN} element={<MainForm />} />
             <Route path={RoutePath.HOME} element={<Home />} />
             <Route path={RoutePath.PATIENTS} element={<Patients />} />
             <Route path={RoutePath.PATIENTS_DASHBOARD} element={<PatientDashboard />} />
