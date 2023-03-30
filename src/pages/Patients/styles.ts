@@ -11,7 +11,6 @@ export const Container = styled.div`
   gap: 1rem;
   max-width: 1920px;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(244,244,244,1) 4%, rgba(112,194,187,1) 100%);
   color: black;
   @media screen and (max-width: 1280px) {
     padding: 2rem 2rem;
