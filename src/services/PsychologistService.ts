@@ -42,7 +42,7 @@ export function PsychologistService() {
  }
 
  async function update(id: string, data: InputUpdatePsychologist) {
-  const request = await Api.patch<Psychologist>(`psychologist/${id}`, { data })
+  const request = await Api.patch<Psychologist>(`psychologist/${id}`, data)
   return request.data
  }
 
@@ -50,6 +50,6 @@ export function PsychologistService() {
   create,
   findAll,
   findById,
-  update,
+  update
  }
 }
