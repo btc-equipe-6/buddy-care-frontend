@@ -7,4 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;  
   }
+  body{
+    background: linear-gradient(90deg, rgba(244,244,244,1) 4%, rgba(112,194,187,1) 100%);
+  }
   `
