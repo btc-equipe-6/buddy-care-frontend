@@ -26,11 +26,12 @@ export function LoginForm() {
   }
   console.log(loginPayload)
   const userData = await apiLogin.login(loginPayload)
+  console.log(apiLogin)
 
   if (userData) {
    const role = userData.user.role
    setLoading(false)
-   if (role == 'psychologist') {
+   if (role === 'psychologist') {
     navigate('/psychologist')
    } else {
     navigate('/patient/1')
