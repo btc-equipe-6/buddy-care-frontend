@@ -30,8 +30,17 @@ export function AvailabilityService() {
   return request.data
  }
 
+ async function remove(psychologistId: string, availabilityId: string) {
+  const request = await Api.delete(
+   `psychologist/${psychologistId}/availability/${availabilityId}`
+  )
+
+  return request.data
+ }
+
  return {
   create,
-  update
+  update,
+  remove
  }
 }
