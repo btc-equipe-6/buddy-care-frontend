@@ -17,10 +17,7 @@ import { AuthContext } from 'context/AuthContext';
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const { loggedIn, role } = useContext(AuthContext);
-
-    console.log(loggedIn);
-    console.log(role);
+    const { loggedIn, role, userId } = useContext(AuthContext);
 
     const toggle = () => setIsOpen(!isOpen);
 
@@ -55,18 +52,9 @@ function Header() {
                         {loggedIn === true && role === 'psychologist' && (
                         <>
                         <NavItem>
-                                <div>
-                                    <Link
-                                        to="/home"
-                                        style={{ color: 'transparent' }}>
-                                        <NavLink href="">Home</NavLink>
-                                    </Link>
-                                </div>
-                            </NavItem><NavItem>
                                     <div>
                                         <Link
-                                            to="/patient"
-                                            style={{ color: 'transparent' }}>
+                                            to={`/psychologist/${userId}/patients`} style={{ color: 'transparent' }}>
                                             <NavLink href="">Pacientes</NavLink>
                                         </Link>
                                     </div>

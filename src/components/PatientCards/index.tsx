@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { PatientContainer, PatientProfile, PatientData } from './styles'
 import { Patient } from 'types/api-types/patients'
+import { PsychologistDetails } from 'types/api-types/psychologist'
 
-export const patientsN = [
+/* export const patientsN = [
  {
   id: 'abcd1',
   name: 'Fernando Sobral',
@@ -93,21 +94,21 @@ export const patientsN = [
   emergencyContact: '73999284181',
   image: 'https://via.placeholder.com/300x200.png?text=Item+1'
  }
-]
+] */
 
 interface PatientCardProps {
- filteredPatients: Patient[]
+ patients: PsychologistDetails[]
 }
 
-const PatientCards = ({ filteredPatients }: PatientCardProps) => {
+const PatientCards = ({ patients }: PatientCardProps) => {
   return ( 
     <>
-    {filteredPatients.map((patients) => (
-       <Link to={`/patient/1`} key={patients.name} style={ { color: 'transparent' } }>
-        <PatientContainer key={patients.name}>
+    {patients?.map((patient) => (
+       <Link to={`/patient/${patient.id}`} key={patient.name} style={ { color: 'transparent' } }>
+        <PatientContainer key={patient.name}>
           <PatientProfile src="https://img.freepik.com/fotos-gratis/aluna-bonita-em-luvas-quentes-de-chapeu-vermelho-senta-se-no-parque-sorri-e-parece-feliz_1258-150935.jpg?w=740&t=st=1679335779~exp=1679336379~hmac=bd17d1084edfa2e65f30efca8eabbc52c76275eb77149de2a01fd2771481b1bf" alt="profile" />
           <PatientData>
-            {patients.name}
+            {patient.name}
           </PatientData>
         </PatientContainer>
         </Link>

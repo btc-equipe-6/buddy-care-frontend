@@ -37,6 +37,7 @@ export const TopBox = styled.div`
 
 export const BottomBox = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -72,7 +73,7 @@ export const ChartBoxTwo = styled.div`
   height: 15rem;
   margin: 0.3rem;
   background-color: #ffffffff;
-  border-radius: 10%;
+  border-radius: 8px;
   flex-direction: row;
   align-items: center;
   justify-content: center;

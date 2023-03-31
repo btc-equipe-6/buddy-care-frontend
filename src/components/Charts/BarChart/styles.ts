@@ -16,4 +16,5 @@ export const Title = styled.h1`
 export const Chart = styled.div`
     display: flex;
     padding-top: 1rem;
+    width: 25rem;
 `

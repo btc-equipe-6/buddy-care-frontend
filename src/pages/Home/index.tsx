@@ -1,35 +1,32 @@
 import BarChart from "components/Charts/BarChart";
-import PolarChart from "components/Charts/PolarChart";
 import { useEffect, useState } from "react";
-import { AllPatients } from "services/PatientService";
-import { Psychologist } from "types/api-types/psychologist";
+import { useParams } from "react-router-dom";
+import { PsychologistDetails } from "types/api-types/psychologist";
 import { BottomBox, ChartBox, ChartBoxTwo, Container, Content, ContentText, TopBox } from "./styles";
+import { PsychologistService } from "services/PsychologistService";
+import LineChart from "components/Charts/LineChart";
 
 const Home = () => {
-    
-    const [psychologist, setPsychologist] = useState<Psychologist[]>([]);
+    const { id } = useParams();
+    const [psychologist, setPsychologist] = useState<PsychologistDetails[]>();
 
-    useEffect(() => {
-    const getPatients = async () => {
-      try {
-        const response = await AllPatients.AllPatients();
-        console.log(response)
-        if (response && response.data) {
-          setPsychologist(response.data);
-        }
-      } catch (error) {
-        console.log(error);
+    const PsychologistIdRender = async () => {
+      if (id !== undefined) {
+        const res = await PsychologistService().findById(id);
+        setPsychologist([res])
       }
     };
-    getPatients();
-  }, []);
+
+    useEffect(() => {
+      PsychologistIdRender();
+    }, []);
+
 
 
     return ( 
         <Container>
-            {psychologist.map((psychologist) => (
-            <Content>
-            
+            {psychologist?.map((psychologist) => (
+            <Content key={psychologist.id}>
                 <TopBox>
                     <ChartBox>
                         <ContentText>Nome</ContentText>
@@ -46,13 +43,14 @@ const Home = () => {
                 </TopBox>
                 <BottomBox>
                     <ChartBoxTwo>
-                        <BarChart/>
+                        <LineChart
+                           sentimentAnalisys={psychologist.sentimentAnalysisEvolution}
+                        />
                     </ChartBoxTwo>
                     <ChartBoxTwo>
-                        <PolarChart />
+                        <BarChart sentimentAnalisys={psychologist.sentimentAnalysisEvolution} />
                     </ChartBoxTwo>
                 </BottomBox>
-                
             </Content>  
             ))}
         </Container>

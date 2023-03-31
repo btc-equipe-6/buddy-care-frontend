@@ -1,5 +1,4 @@
 import BarChart from "components/Charts/BarChart";
-import PolarChart from "components/Charts/PolarChart";
 import { BottomBox, ChartBox, ChartBoxTwo, Container, Content, ContentText, TopBox } from "pages/Home/styles";
 
 const PatientDashboard = () => {
@@ -27,7 +26,6 @@ const PatientDashboard = () => {
                         <BarChart/>
                     </ChartBoxTwo>
                     <ChartBoxTwo>
-                        <PolarChart />
                     </ChartBoxTwo>
                 </BottomBox>
             </Content>  

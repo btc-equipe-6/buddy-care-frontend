@@ -14,7 +14,7 @@ const Router = () => {
         <Routes>
             <Route path={RoutePath.REGISTER} element={<MainForm />} />
             <Route path={RoutePath.LOGIN} element={<Login />} />
-            <Route path={RoutePath.HOME} element={<Home />} />
+            <Route path={RoutePath.PSYCHOLOGIC_DASHBOARD} element={<Home />} />
             <Route path={RoutePath.PATIENTS} element={<Patients />} />
             <Route path={RoutePath.PATIENTS_DASHBOARD} element={<PatientDashboard />} />
             <Route path={RoutePath.diary} element={<Journal/>} />

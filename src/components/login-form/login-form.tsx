@@ -10,8 +10,8 @@ export function LoginForm() {
  const [showPassword, setShowPassword] = useState<boolean>(false)
  const [loading, setLoading] = useState<boolean>(false)
  const [error, setError] = useState<boolean>(false)
- const { setLoggedIn } = useContext(AuthContext);
- const { setRole } = useContext(AuthContext);
+ const { setLoggedIn, setRole, setUserId } = useContext(AuthContext);
+
 
  const navigate = useNavigate()
 
@@ -27,22 +27,20 @@ export function LoginForm() {
    email: e.currentTarget.email.value,
    password: e.currentTarget.password.value
   }
-  console.log(loginPayload)
   const userData = await apiLogin.login(loginPayload)
-  console.log(apiLogin)
-
-console.log(setLoggedIn)
 
   if (userData) {
    setLoggedIn(true)
    const role = userData.user.role
    setLoading(false)
+   setUserId(userData.user.id);
    if (role === 'psychologist') {
    setRole("psychologist")
-    navigate('/home')
+    navigate(`/psychologist/${userData.user.id}`)
    } else {
    setRole("patient")
-   navigate('/patient/1')
+      navigate(`/patient/${userData.user.id}`)
+
    }
   } else {
    setLoading(false)
