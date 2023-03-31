@@ -5,5 +5,6 @@ export enum RoutePath {
   diary = '/diary',
   LOGIN = '/',
   Report= '/report',
-  REGISTER= '/register'
+  REGISTER= '/register',
+  psychologist_profile = '/psychologist/profile'
 }
