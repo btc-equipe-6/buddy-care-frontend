@@ -17,7 +17,7 @@ export interface Psychologist {
 }
 
 export interface PsychologistDetails extends Psychologist {
- patients?: any[]
+psychologist?: any[]
  availability?: any[]
  therapySession?: any[]
  therapySessionRequest?: any[]
