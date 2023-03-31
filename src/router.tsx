@@ -8,13 +8,15 @@ import Report from 'pages/Reports/reports'
 import MainForm from 'pages/Forms'
 import Login from 'pages/Login/login'
 import { PsychologistProfile } from 'pages/Psychologist-Profile'
+import PatientHome from 'pages/home_paciente'
 
 const Router = () => {
  return (
   <Routes>
    <Route path={RoutePath.REGISTER} element={<MainForm />} />
    <Route path={RoutePath.LOGIN} element={<Login />} />
-   <Route path={RoutePath.PSYCHOLOGIC_DASHBOARD} element={<Home />} />
+   <Route path={RoutePath.PSYCHOLOGIC_DASHBOARD} element={<Home/>} />
+   <Route path={RoutePath.home_pacient} element={<PatientHome />} />
    <Route path={RoutePath.PATIENTS} element={<Patients />} />
    <Route path={RoutePath.PATIENTS_DASHBOARD} element={<PatientDashboard />} />
    <Route path={RoutePath.diary} element={<Journal />} />

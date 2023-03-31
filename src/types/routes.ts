@@ -6,5 +6,6 @@ export enum RoutePath {
   LOGIN = '/',
   Report= '/report',
   REGISTER= '/register',
-  psychologist_profile = '/psychologist/profile'
+  psychologist_profile = '/psychologist/profile',
+  home_pacient= '/home_pacient'
 }

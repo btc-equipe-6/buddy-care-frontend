@@ -33,7 +33,7 @@ function Header() {
                         <NavItem>
                                 <div>
                                     <Link
-                                        to="/home"
+                                        to="/home_pacient"
                                         style={{ color: 'transparent' }}>
                                         <NavLink href="">Home</NavLink>
                                     </Link>
@@ -52,6 +52,7 @@ function Header() {
                         {loggedIn === true && role === 'psychologist' && (
                         <>
                         <NavItem>
+                           
                                     <div>
                                         <Link
                                             to={`/psychologist/${userId}/patients`} style={{ color: 'transparent' }}>

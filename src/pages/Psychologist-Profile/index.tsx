@@ -18,11 +18,9 @@ export const PsychologistProfile = () => {
  const [userProfile, setUserProfile] = useState({} as PsychologistDetails)
  const [isEditing, setIsEditing] = useState(false)
  const [control, setControl] = useState<boolean>()
-
+const id =JSON.parse(localStorage.getItem("user") ?? "")?.id ?? "";
  const getUserProfile = async () => {
-  const response = await PsychologistService().findById(
-   'a0234121-359f-4f5c-83ac-37283854801a'
-  )
+  const response = await PsychologistService().findById(id)
   setUserProfile(response)
  }
 
