@@ -4,7 +4,7 @@ import { ButtonDiary } from "components/Diary/styles";
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 
   input {
