@@ -18,6 +18,15 @@ export interface Patient {
     gender: string;
     emergencyContact: string;
   }
+  export interface PatientDetails extends Patient {
+    patients?: any[]
+    availability?: any[]
+    therapySession?: any[]
+    therapySessionRequest?: any[]
+    sentimentAnalysisPacient?: any[]
+    sentimentAnalysisPsychologist?: any[]
+    sentimentAnalysisEvolution?: any[]
+   }
 
   export interface sentimentAnalysisPacient{
     patientId:string;

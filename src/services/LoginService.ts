@@ -17,7 +17,10 @@ export const apiLogin = {
   try {
    const response = await Api.post('/auth', { email, password })
    localStorage.setItem('token', response.data.token)
+   localStorage.setItem("user", JSON.stringify(response.data.user))
+   console.log(response.data)
    return response.data
+   
   } catch (err: any) {
    handleError('Erro ao efetuar login', '')
   }

@@ -6,3 +6,21 @@ export interface appointiment {
     psychologistId: string;
     patientId: string;
 }
+
+export interface therapySessionRequest
+    {
+      id:string,
+      startTime: string,
+      endTime: string,
+      date: string,
+      requesterId?:string,
+      status: string,
+      createdAt: string,
+    }
+
+    export interface therapySession {
+        id?:string,
+        startTime: string,                          
+        endTime?:string,                          
+        date: string,
+    }

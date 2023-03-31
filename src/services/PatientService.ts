@@ -50,6 +50,24 @@ export const AllPatients = {
       console.log(err);
     }
   },
+  therapyAccept:async (id:string) => {
+    try {
+      const newSolicitation = await Api.patch(`/therapy-request/${id}`);
+      return  newSolicitation;
+    } catch (err) {
+      console.log(err);
+    }
+    
+  },
+  therapyReject:async (id:string) => {
+    try {
+      const newSolicitation = await Api.delete(`/therapy-request/${id}`);
+      return  newSolicitation;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   }
     
   

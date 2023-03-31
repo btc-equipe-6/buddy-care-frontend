@@ -13,10 +13,11 @@ export interface Psychologist {
  city?: string
  street?: string
  fee?: number
+ imageUrl?: string
 }
 
 export interface PsychologistDetails extends Psychologist {
- patients?: any 
+psychologist?: any
  availability?: any[]
  therapySession?: any[]
  therapySessionRequest?: any[]
