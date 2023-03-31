@@ -15,7 +15,7 @@ export const AllPatients = {
     
   },
 
-  UserById: async (id: string) => {
+  UserById: async (id: string | undefined) => {
     try {
       const res = await Api.get(`/patient/${id}`);
       return res;

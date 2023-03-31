@@ -16,7 +16,7 @@ export default function LineChart({ sentimentAnalisys }: LineChartProps | any) {
    {
     label: 'Relevancia Absoluta',
     barThickness: 50,
-    data: sentimentAnalisys.map(
+    data: sentimentAnalisys?.map(
      (el: { abs_relevance: any }) => el.abs_relevance
     ),
     backgroundColor: 'red',
@@ -26,7 +26,7 @@ export default function LineChart({ sentimentAnalisys }: LineChartProps | any) {
    {
     label: 'Relevancia média',
     barThickness: 50,
-    data: sentimentAnalisys.map((el: { relevance: any }) => el.relevance),
+    data: sentimentAnalisys?.map((el: { relevance: any }) => el.relevance),
     backgroundColor: 'orange',
     borderColor: 'black',
     borderWidth: 1

@@ -19,7 +19,7 @@ export interface Patient {
     emergencyContact: string;
   }
   export interface PatientDetails extends Patient {
-    patients?: any[]
+    patients?: any
     availability?: any[]
     therapySession?: any[]
     therapySessionRequest?: any[]

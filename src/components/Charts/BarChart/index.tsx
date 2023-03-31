@@ -29,7 +29,7 @@ const countSentiments = (sentiments: SentimentAnalysisEvolution[]) => {
   Neutral: 0
  }
 
- sentiments.forEach((el: { code: any }) => {
+ sentiments?.forEach((el: { code: any }) => {
   sentimentCount[el.code]++
  })
 
