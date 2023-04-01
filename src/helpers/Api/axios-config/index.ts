@@ -1,7 +1,7 @@
 import axios from "axios";
 import { errorInterceptor, responseInterceptor } from "./interceptors";
 
-const apiUrl = "http://localhost:3333";
+const apiUrl = "https://buddy-care-backend-production.up.railway.app";
 
 const api = axios.create({
   baseURL: apiUrl,
