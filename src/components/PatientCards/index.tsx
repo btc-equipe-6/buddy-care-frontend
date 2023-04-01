@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { PatientContainer, PatientProfile, PatientData } from './styles'
 import { PsychologistDetails } from 'types/api-types/psychologist'
+import { Button } from 'reactstrap'
+import AppointmentForm from 'components/appoitamentForm'
 
 interface PatientCardProps {
  patients: PsychologistDetails[]
@@ -17,6 +19,8 @@ const PatientCards = ({ patients }: PatientCardProps) => {
           <PatientData>
             {patient.name}
           </PatientData>
+        
+          
         </PatientContainer>
         </Link>
       ))}

@@ -5,7 +5,7 @@ import { ButtonDiary, TextArea } from "./styles";
 
 const Diary = () => {
   const [newPost, setNewPost] = useState<sentimentAnalysisPacient>({
-    patientId: "cdfeccad-1d8b-4f32-9a36-e31e96dacdd3",
+    patientId: JSON.parse(localStorage.getItem('user') ?? '').id,
     txt: "",
   });
 
